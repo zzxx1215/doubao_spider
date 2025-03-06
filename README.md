@@ -7,32 +7,57 @@
 #### 1.1 环境配置
 
 ```
-Windows10系统
-java：jdk1.8.0
-flink：1.9.3
-redis：验证redis-5.0.14可用
-mysql：8.0.X
+macOS 15.3
+Java：JDK 1.8.0 
+大数据框架：
+Flink：1.13.0（POM 配置中定义的版本） 
+Scala：2.12（Flink 依赖使用的版本） 
+数据库及相关工具：
+MySQL：8.0.X 连接驱动：mysql-connector-java 8.0.28 
+数据库连接池： commons-dbcp 1.4 
+commons-pool 1.6 
+commons-dbutils 1.6 
+日志管理：
+slf4j-api 1.7.10 
+slf4j-log4j12 1.7.10 
+Zookeeper 相关：
+Zookeeper：3.4.6 
+Curator Framework：2.7.1 
+定时任务调度：
+Quartz：1.8.4 
+Web 及 HTTP 相关：
+HTML 解析： htmlcleaner 2.10 
+jsoup 1.10.2 
+HTTP 客户端： httpclient 4.5.13 
+大数据存储：
+HBase 相关： hbase-hadoop2-compat 1.1.5 
+hbase-client 1.1.5 
+hbase-common 1.1.5 
+hbase-server 1.1.5 
+单元测试：
+JUnit：4.12 
+
 ```
 
 #### 1.2 启动步骤
 
-1. 根据当前电脑redis和mysql配置，修改\resources\redis.properties和\resources\dbcp-config.properties配置文件。
-2. 根据\scripts\db.sql建立相应的mysql数据库和表。
-3. 进入redis安装目录，打开cmd，运行redis-server.exe，保持窗口开启。
+1. 根据当前电脑Hbase和mysql配置
+2. 终端启动mysql
+3. 根据\scripts\db.sql建立相应的mysql数据库和表。
 4. 运行FlinkSpider.java，运行成功后结果如下图所示
 
 ```
 -----flink url    https://list.jd.com/list.html?cat=9987,653,655&page=1
-2022-08-22 11:37:49,663 [Flat Map -> Sink: Unnamed (1/4)#0] [cn.xpleaf.spider.utils.HttpUtil] [INFO] - 下载网页：https://list.jd.com/list.html?cat=9987,653,655&page=1，消耗时长：619 ms，代理信息：null:null
-2022-08-22 11:37:49,844 [Flat Map -> Sink: Unnamed (1/4)#0] [cn.xpleaf.spider.core.parser.Impl.JDHtmlParserImpl] [INFO] - 解析列表页面:https://list.jd.com/list.html?cat=9987,653,655&page=1, 消耗时长:32ms
-2022-08-22 11:37:49,844 [Flat Map -> Sink: Unnamed (1/4)#0] [cn.xpleaf.spider.ISpider] [INFO] - https://item.jd.com/100014352543.html
-2022-08-22 11:37:49,844 [Flat Map -> Sink: Unnamed (1/4)#0] [cn.xpleaf.spider.ISpider] [INFO] - https://item.jd.com/100016034400.html
-2022-08-22 11:37:49,845 [Flat Map -> Sink: Unnamed (1/4)#0] [cn.xpleaf.spider.ISpider] [INFO] - https://item.jd.com/100028235502.html
-2022-08-22 11:37:49,845 [Flat Map -> Sink: Unnamed (1/4)#0] [cn.xpleaf.spider.ISpider] [INFO] - https://item.jd.com/100016931023.html
-2022-08-22 11:37:49,845 [Flat Map -> Sink: Unnamed (1/4)#0] [cn.xpleaf.spider.ISpider] [INFO] - https://item.jd.com/100030441714.html
+2025-03-05 10:02:58,846 [Flat Map -> Sink: Unnamed (1/4)#0] [org.apache.flink.runtime.state.heap.HeapKeyedStateBackendBuilder] [INFO] - Finished to build heap keyed state-backend.
+2025-03-05 10:02:58,846 [Flat Map -> Sink: Unnamed (3/4)#0] [org.apache.flink.runtime.state.heap.HeapKeyedStateBackendBuilder] [INFO] - Finished to build heap keyed state-backend.
+2025-03-05 10:02:58,846 [Flat Map -> Sink: Unnamed (3/4)#0] [org.apache.flink.runtime.state.heap.HeapKeyedStateBackend] [INFO] - Initializing heap keyed state backend with stream factory.
+2025-03-05 10:02:58,846 [Flat Map -> Sink: Unnamed (1/4)#0] [org.apache.flink.runtime.state.heap.HeapKeyedStateBackend] [INFO] - Initializing heap keyed state backend with stream factory.
+2025-03-05 10:02:58,847 [Flat Map -> Sink: Unnamed (3/4)#0] [org.apache.flink.runtime.taskmanager.Task] [INFO] - Flat Map -> Sink: Unnamed (3/4)#0 (4a1fbd9ad8f45bfed93535a5df30abf4) switched from INITIALIZING to RUNNING.
+2025-03-05 10:02:58,847 [Flat Map -> Sink: Unnamed (1/4)#0] [org.apache.flink.runtime.taskmanager.Task] [INFO] - Flat Map -> Sink: Unnamed (1/4)#0 (f21ac67095db2f5da232b96de051fb1f) switched from INITIALIZING to RUNNING.
+2025-03-05 10:02:58,847 [flink-akka.actor.default-dispatcher-5] [org.apache.flink.runtime.executiongraph.ExecutionGraph] [INFO] - Flat Map -> Sink: Unnamed (3/4) (4a1fbd9ad8f45bfed93535a5df30abf4) switched from INITIALIZING to RUNNING.
+2025-03-05 10:02:58,847 [flink-akka.actor.default-dispatcher-5] [org.apache.flink.runtime.executiongraph.ExecutionGraph] [INFO] - Flat Map -> Sink: Unnamed (1/4) (f21ac67095db2f5da232b96de051fb1f) switched from INITIALIZING to RUNNING.
 ```
-
-5. 一段时间后，运行SeedUrl.java，向redis数据库补充url
+5. 运行Query.java,输入查询条目和关键词，据此构建 SQL 查询语句，统计符合条件的记录数，最后根据用户选择的显示条目，执行预编译 SQL 查询并输出结果。
 
 
 
