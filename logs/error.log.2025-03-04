@@ -1,0 +1,1375 @@
+2025-03-04 19:21:09 [main] [org.apache.hadoop.util.Shell] [ERROR] - Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:78)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:77)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:240)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:257)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:234)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:749)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:734)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:607)
+	at org.apache.hadoop.hbase.security.User$SecureHadoopUser.<init>(User.java:286)
+	at org.apache.hadoop.hbase.security.User$SecureHadoopUser.<init>(User.java:282)
+	at org.apache.hadoop.hbase.security.User.getCurrent(User.java:185)
+	at org.apache.hadoop.hbase.security.UserProvider.getCurrent(UserProvider.java:88)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:215)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at cn.xpleaf.spider.utils.HBaseUtil.<clinit>(HBaseUtil.java:27)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.init(RandomHBaseRepositoryImpl.java:26)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.<init>(RandomHBaseRepositoryImpl.java:18)
+	at cn.xpleaf.spider.ISpider.getInstance(ISpider.java:109)
+	at cn.xpleaf.spider.FlinkSpider.main(FlinkSpider.java:17)
+2025-03-04 19:21:29 [main] [org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper] [ERROR] - ZooKeeper exists failed after 4 attempts
+2025-03-04 19:21:29 [main] [org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher] [ERROR] - hconnection-0x5891e32e0x0, quorum=uplooking01:2181,uplooking02:2181,uplooking03:2181, baseZNode=/hbase Received unexpected KeeperException, re-throwing exception
+org.apache.zookeeper.KeeperException$OperationTimeoutException: KeeperErrorCode = OperationTimeout
+	at org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper.checkZk(RecoverableZooKeeper.java:144)
+	at org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper.exists(RecoverableZooKeeper.java:221)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.checkExists(ZKUtil.java:541)
+	at org.apache.hadoop.hbase.zookeeper.ZKClusterId.readClusterIdZNode(ZKClusterId.java:65)
+	at org.apache.hadoop.hbase.client.ZooKeeperRegistry.getClusterId(ZooKeeperRegistry.java:105)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.retrieveClusterId(ConnectionManager.java:880)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.<init>(ConnectionManager.java:636)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:238)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:218)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at cn.xpleaf.spider.utils.HBaseUtil.<clinit>(HBaseUtil.java:27)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.init(RandomHBaseRepositoryImpl.java:26)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.<init>(RandomHBaseRepositoryImpl.java:18)
+	at cn.xpleaf.spider.ISpider.getInstance(ISpider.java:109)
+	at cn.xpleaf.spider.FlinkSpider.main(FlinkSpider.java:17)
+2025-03-04 19:22:20 [main] [org.apache.hadoop.util.Shell] [ERROR] - Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:78)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:77)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:240)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:257)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:234)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:749)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:734)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:607)
+	at org.apache.hadoop.hbase.security.User$SecureHadoopUser.<init>(User.java:286)
+	at org.apache.hadoop.hbase.security.User$SecureHadoopUser.<init>(User.java:282)
+	at org.apache.hadoop.hbase.security.User.getCurrent(User.java:185)
+	at org.apache.hadoop.hbase.security.UserProvider.getCurrent(UserProvider.java:88)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:215)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at cn.xpleaf.spider.utils.HBaseUtil.<clinit>(HBaseUtil.java:27)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.init(RandomHBaseRepositoryImpl.java:26)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.<init>(RandomHBaseRepositoryImpl.java:18)
+	at cn.xpleaf.spider.ISpider.getInstance(ISpider.java:109)
+	at cn.xpleaf.spider.FlinkSpider.main(FlinkSpider.java:17)
+2025-03-04 19:22:41 [main] [org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper] [ERROR] - ZooKeeper exists failed after 4 attempts
+2025-03-04 19:22:41 [main] [org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher] [ERROR] - hconnection-0x5891e32e0x0, quorum=uplooking01:2181,uplooking02:2181,uplooking03:2181, baseZNode=/hbase Received unexpected KeeperException, re-throwing exception
+org.apache.zookeeper.KeeperException$OperationTimeoutException: KeeperErrorCode = OperationTimeout
+	at org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper.checkZk(RecoverableZooKeeper.java:144)
+	at org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper.exists(RecoverableZooKeeper.java:221)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.checkExists(ZKUtil.java:541)
+	at org.apache.hadoop.hbase.zookeeper.ZKClusterId.readClusterIdZNode(ZKClusterId.java:65)
+	at org.apache.hadoop.hbase.client.ZooKeeperRegistry.getClusterId(ZooKeeperRegistry.java:105)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.retrieveClusterId(ConnectionManager.java:880)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.<init>(ConnectionManager.java:636)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:238)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:218)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at cn.xpleaf.spider.utils.HBaseUtil.<clinit>(HBaseUtil.java:27)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.init(RandomHBaseRepositoryImpl.java:26)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.<init>(RandomHBaseRepositoryImpl.java:18)
+	at cn.xpleaf.spider.ISpider.getInstance(ISpider.java:109)
+	at cn.xpleaf.spider.FlinkSpider.main(FlinkSpider.java:17)
+2025-03-04 19:22:59 [main] [org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper] [ERROR] - ZooKeeper getChildren failed after 4 attempts
+2025-03-04 19:23:17 [main] [org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper] [ERROR] - ZooKeeper getData failed after 4 attempts
+2025-03-04 19:23:17 [main] [org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher] [ERROR] - hconnection-0x5891e32e0x0, quorum=uplooking01:2181,uplooking02:2181,uplooking03:2181, baseZNode=/hbase Received unexpected KeeperException, re-throwing exception
+org.apache.zookeeper.KeeperException$OperationTimeoutException: KeeperErrorCode = OperationTimeout
+	at org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper.checkZk(RecoverableZooKeeper.java:144)
+	at org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper.getData(RecoverableZooKeeper.java:359)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.getData(ZKUtil.java:745)
+	at org.apache.hadoop.hbase.zookeeper.MetaTableLocator.getMetaRegionState(MetaTableLocator.java:492)
+	at org.apache.hadoop.hbase.zookeeper.MetaTableLocator.getMetaRegionLocation(MetaTableLocator.java:173)
+	at org.apache.hadoop.hbase.zookeeper.MetaTableLocator.blockUntilAvailable(MetaTableLocator.java:610)
+	at org.apache.hadoop.hbase.zookeeper.MetaTableLocator.blockUntilAvailable(MetaTableLocator.java:590)
+	at org.apache.hadoop.hbase.zookeeper.MetaTableLocator.blockUntilAvailable(MetaTableLocator.java:569)
+	at org.apache.hadoop.hbase.client.ZooKeeperRegistry.getMetaRegionLocation(ZooKeeperRegistry.java:61)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateMeta(ConnectionManager.java:1186)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateRegion(ConnectionManager.java:1153)
+	at org.apache.hadoop.hbase.client.RpcRetryingCallerWithReadReplicas.getRegionLocations(RpcRetryingCallerWithReadReplicas.java:300)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas.call(ScannerCallableWithReplicas.java:156)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas.call(ScannerCallableWithReplicas.java:60)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:210)
+	at org.apache.hadoop.hbase.client.ClientScanner.call(ClientScanner.java:326)
+	at org.apache.hadoop.hbase.client.ClientScanner.nextScanner(ClientScanner.java:301)
+	at org.apache.hadoop.hbase.client.ClientScanner.initializeScannerInConstruction(ClientScanner.java:166)
+	at org.apache.hadoop.hbase.client.ClientScanner.<init>(ClientScanner.java:161)
+	at org.apache.hadoop.hbase.client.HTable.getScanner(HTable.java:797)
+	at org.apache.hadoop.hbase.MetaTableAccessor.fullScan(MetaTableAccessor.java:602)
+	at org.apache.hadoop.hbase.MetaTableAccessor.tableExists(MetaTableAccessor.java:366)
+	at org.apache.hadoop.hbase.client.HBaseAdmin.tableExists(HBaseAdmin.java:403)
+	at cn.xpleaf.spider.utils.HBaseUtil.initTable(HBaseUtil.java:39)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.init(RandomHBaseRepositoryImpl.java:26)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.<init>(RandomHBaseRepositoryImpl.java:18)
+	at cn.xpleaf.spider.ISpider.getInstance(ISpider.java:109)
+	at cn.xpleaf.spider.FlinkSpider.main(FlinkSpider.java:17)
+2025-03-04 19:23:17 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 初始化表时出错
+org.apache.hadoop.hbase.DoNotRetryIOException: java.lang.NoSuchMethodError: com.google.common.base.Stopwatch.elapsedMillis()J
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.translateException(RpcRetryingCaller.java:239)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:212)
+	at org.apache.hadoop.hbase.client.ClientScanner.call(ClientScanner.java:326)
+	at org.apache.hadoop.hbase.client.ClientScanner.nextScanner(ClientScanner.java:301)
+	at org.apache.hadoop.hbase.client.ClientScanner.initializeScannerInConstruction(ClientScanner.java:166)
+	at org.apache.hadoop.hbase.client.ClientScanner.<init>(ClientScanner.java:161)
+	at org.apache.hadoop.hbase.client.HTable.getScanner(HTable.java:797)
+	at org.apache.hadoop.hbase.MetaTableAccessor.fullScan(MetaTableAccessor.java:602)
+	at org.apache.hadoop.hbase.MetaTableAccessor.tableExists(MetaTableAccessor.java:366)
+	at org.apache.hadoop.hbase.client.HBaseAdmin.tableExists(HBaseAdmin.java:403)
+	at cn.xpleaf.spider.utils.HBaseUtil.initTable(HBaseUtil.java:39)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.init(RandomHBaseRepositoryImpl.java:26)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.<init>(RandomHBaseRepositoryImpl.java:18)
+	at cn.xpleaf.spider.ISpider.getInstance(ISpider.java:109)
+	at cn.xpleaf.spider.FlinkSpider.main(FlinkSpider.java:17)
+Caused by: java.lang.NoSuchMethodError: com.google.common.base.Stopwatch.elapsedMillis()J
+	at org.apache.hadoop.hbase.zookeeper.MetaTableLocator.blockUntilAvailable(MetaTableLocator.java:611)
+	at org.apache.hadoop.hbase.zookeeper.MetaTableLocator.blockUntilAvailable(MetaTableLocator.java:590)
+	at org.apache.hadoop.hbase.zookeeper.MetaTableLocator.blockUntilAvailable(MetaTableLocator.java:569)
+	at org.apache.hadoop.hbase.client.ZooKeeperRegistry.getMetaRegionLocation(ZooKeeperRegistry.java:61)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateMeta(ConnectionManager.java:1186)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateRegion(ConnectionManager.java:1153)
+	at org.apache.hadoop.hbase.client.RpcRetryingCallerWithReadReplicas.getRegionLocations(RpcRetryingCallerWithReadReplicas.java:300)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas.call(ScannerCallableWithReplicas.java:156)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas.call(ScannerCallableWithReplicas.java:60)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:210)
+	... 13 more
+2025-03-04 19:23:35 [main] [org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper] [ERROR] - ZooKeeper getChildren failed after 4 attempts
+2025-03-04 20:51:37 [main] [org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper] [ERROR] - ZooKeeper exists failed after 4 attempts
+2025-03-04 20:51:37 [main] [org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher] [ERROR] - hconnection-0x68567e200x0, quorum=uplooking01:2181,uplooking02:2181,uplooking03:2181, baseZNode=/hbase Received unexpected KeeperException, re-throwing exception
+org.apache.zookeeper.KeeperException$OperationTimeoutException: KeeperErrorCode = OperationTimeout
+	at org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper.checkZk(RecoverableZooKeeper.java:144)
+	at org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper.exists(RecoverableZooKeeper.java:221)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.checkExists(ZKUtil.java:541)
+	at org.apache.hadoop.hbase.zookeeper.ZKClusterId.readClusterIdZNode(ZKClusterId.java:65)
+	at org.apache.hadoop.hbase.client.ZooKeeperRegistry.getClusterId(ZooKeeperRegistry.java:105)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.retrieveClusterId(ConnectionManager.java:880)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.<init>(ConnectionManager.java:636)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:238)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:218)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at cn.xpleaf.spider.utils.HBaseUtil.<clinit>(HBaseUtil.java:27)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.init(RandomHBaseRepositoryImpl.java:26)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.<init>(RandomHBaseRepositoryImpl.java:18)
+	at cn.xpleaf.spider.ISpider.getInstance(ISpider.java:109)
+	at cn.xpleaf.spider.FlinkSpider.main(FlinkSpider.java:17)
+2025-03-04 20:51:37 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 创建 HBase 连接时出错
+java.io.IOException: java.lang.reflect.InvocationTargetException
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:240)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:218)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at cn.xpleaf.spider.utils.HBaseUtil.<clinit>(HBaseUtil.java:27)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.init(RandomHBaseRepositoryImpl.java:26)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.<init>(RandomHBaseRepositoryImpl.java:18)
+	at cn.xpleaf.spider.ISpider.getInstance(ISpider.java:109)
+	at cn.xpleaf.spider.FlinkSpider.main(FlinkSpider.java:17)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:74)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:238)
+	... 7 more
+Caused by: java.lang.UnsupportedOperationException: Constructor threw an exception for org.apache.hadoop.hbase.ipc.RpcClientImpl
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:54)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiateWithCustomCtor(ReflectionUtils.java:34)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:64)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:48)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.<init>(ConnectionManager.java:638)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	... 10 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:74)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:46)
+	... 15 more
+Caused by: java.lang.ExceptionInInitializerError
+	at org.apache.hadoop.hbase.ipc.IPCUtil.<init>(IPCUtil.java:74)
+	at org.apache.hadoop.hbase.ipc.AbstractRpcClient.<init>(AbstractRpcClient.java:95)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1092)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1118)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	... 18 more
+Caused by: java.lang.RuntimeException: Unexpected version format: 22.0.2
+	at org.apache.hadoop.hbase.util.ClassSize.<clinit>(ClassSize.java:119)
+	... 23 more
+2025-03-04 21:12:23 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 创建 HBase 连接时出错
+java.io.IOException: java.lang.reflect.InvocationTargetException
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:240)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:218)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at cn.xpleaf.spider.utils.HBaseUtil.<clinit>(HBaseUtil.java:27)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.init(RandomHBaseRepositoryImpl.java:26)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.<init>(RandomHBaseRepositoryImpl.java:18)
+	at cn.xpleaf.spider.ISpider.getInstance(ISpider.java:109)
+	at cn.xpleaf.spider.FlinkSpider.main(FlinkSpider.java:17)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:74)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:238)
+	... 7 more
+Caused by: java.lang.UnsupportedOperationException: Constructor threw an exception for org.apache.hadoop.hbase.ipc.RpcClientImpl
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:54)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiateWithCustomCtor(ReflectionUtils.java:34)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:64)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:48)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.<init>(ConnectionManager.java:638)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	... 10 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:74)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:46)
+	... 15 more
+Caused by: java.lang.ExceptionInInitializerError
+	at org.apache.hadoop.hbase.ipc.IPCUtil.<init>(IPCUtil.java:74)
+	at org.apache.hadoop.hbase.ipc.AbstractRpcClient.<init>(AbstractRpcClient.java:95)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1092)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1118)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	... 18 more
+Caused by: java.lang.RuntimeException: Unexpected version format: 22.0.2
+	at org.apache.hadoop.hbase.util.ClassSize.<clinit>(ClassSize.java:119)
+	... 23 more
+2025-03-04 21:12:52 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 创建 HBase 连接时出错
+java.io.IOException: java.lang.reflect.InvocationTargetException
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:240)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:218)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at cn.xpleaf.spider.utils.HBaseUtil.<clinit>(HBaseUtil.java:27)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.init(RandomHBaseRepositoryImpl.java:26)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.<init>(RandomHBaseRepositoryImpl.java:18)
+	at cn.xpleaf.spider.ISpider.getInstance(ISpider.java:109)
+	at cn.xpleaf.spider.FlinkSpider.main(FlinkSpider.java:17)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:74)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:238)
+	... 7 more
+Caused by: java.lang.UnsupportedOperationException: Constructor threw an exception for org.apache.hadoop.hbase.ipc.RpcClientImpl
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:54)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiateWithCustomCtor(ReflectionUtils.java:34)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:64)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:48)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.<init>(ConnectionManager.java:638)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	... 10 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:74)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:46)
+	... 15 more
+Caused by: java.lang.ExceptionInInitializerError
+	at org.apache.hadoop.hbase.ipc.IPCUtil.<init>(IPCUtil.java:74)
+	at org.apache.hadoop.hbase.ipc.AbstractRpcClient.<init>(AbstractRpcClient.java:95)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1092)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1118)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	... 18 more
+Caused by: java.lang.RuntimeException: Unexpected version format: 22.0.2
+	at org.apache.hadoop.hbase.util.ClassSize.<clinit>(ClassSize.java:119)
+	... 23 more
+2025-03-04 21:39:59 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 创建 HBase 连接时出错
+java.io.IOException: java.lang.reflect.InvocationTargetException
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:240)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:218)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at cn.xpleaf.spider.utils.HBaseUtil.<clinit>(HBaseUtil.java:27)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.init(RandomHBaseRepositoryImpl.java:26)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.<init>(RandomHBaseRepositoryImpl.java:18)
+	at cn.xpleaf.spider.ISpider.getInstance(ISpider.java:109)
+	at cn.xpleaf.spider.FlinkSpider.main(FlinkSpider.java:17)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:238)
+	... 7 more
+Caused by: java.lang.UnsupportedOperationException: Constructor threw an exception for org.apache.hadoop.hbase.ipc.RpcClientImpl
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:54)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiateWithCustomCtor(ReflectionUtils.java:34)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:64)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:48)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.<init>(ConnectionManager.java:638)
+	... 12 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:46)
+	... 16 more
+Caused by: java.lang.ExceptionInInitializerError
+	at org.apache.hadoop.hbase.ipc.IPCUtil.<init>(IPCUtil.java:74)
+	at org.apache.hadoop.hbase.ipc.AbstractRpcClient.<init>(AbstractRpcClient.java:95)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1092)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1118)
+	... 21 more
+Caused by: java.lang.RuntimeException: Unexpected version format: 11.0.26
+	at org.apache.hadoop.hbase.util.ClassSize.<clinit>(ClassSize.java:119)
+	... 25 more
+2025-03-04 21:40:31 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 创建 HBase 连接时出错
+java.io.IOException: java.lang.reflect.InvocationTargetException
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:240)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:218)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at cn.xpleaf.spider.utils.HBaseUtil.<clinit>(HBaseUtil.java:27)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.init(RandomHBaseRepositoryImpl.java:26)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.<init>(RandomHBaseRepositoryImpl.java:18)
+	at cn.xpleaf.spider.ISpider.getInstance(ISpider.java:109)
+	at cn.xpleaf.spider.FlinkSpider.main(FlinkSpider.java:17)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:238)
+	... 7 more
+Caused by: java.lang.UnsupportedOperationException: Constructor threw an exception for org.apache.hadoop.hbase.ipc.RpcClientImpl
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:54)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiateWithCustomCtor(ReflectionUtils.java:34)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:64)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:48)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.<init>(ConnectionManager.java:638)
+	... 12 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:46)
+	... 16 more
+Caused by: java.lang.ExceptionInInitializerError
+	at org.apache.hadoop.hbase.ipc.IPCUtil.<init>(IPCUtil.java:74)
+	at org.apache.hadoop.hbase.ipc.AbstractRpcClient.<init>(AbstractRpcClient.java:95)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1092)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1118)
+	... 21 more
+Caused by: java.lang.RuntimeException: Unexpected version format: 11.0.26
+	at org.apache.hadoop.hbase.util.ClassSize.<clinit>(ClassSize.java:119)
+	... 25 more
+2025-03-04 21:48:00 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 创建 HBase 连接时出错
+java.io.IOException: java.lang.reflect.InvocationTargetException
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:240)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:218)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at cn.xpleaf.spider.utils.HBaseUtil.<clinit>(HBaseUtil.java:27)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.init(RandomHBaseRepositoryImpl.java:26)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.<init>(RandomHBaseRepositoryImpl.java:18)
+	at cn.xpleaf.spider.ISpider.getInstance(ISpider.java:109)
+	at cn.xpleaf.spider.FlinkSpider.main(FlinkSpider.java:17)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:238)
+	... 7 more
+Caused by: java.lang.UnsupportedOperationException: Constructor threw an exception for org.apache.hadoop.hbase.ipc.RpcClientImpl
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:54)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiateWithCustomCtor(ReflectionUtils.java:34)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:64)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:48)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.<init>(ConnectionManager.java:638)
+	... 12 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:46)
+	... 16 more
+Caused by: java.lang.ExceptionInInitializerError
+	at org.apache.hadoop.hbase.ipc.IPCUtil.<init>(IPCUtil.java:74)
+	at org.apache.hadoop.hbase.ipc.AbstractRpcClient.<init>(AbstractRpcClient.java:95)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1092)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1118)
+	... 21 more
+Caused by: java.lang.RuntimeException: Unexpected version format: 11.0.26
+	at org.apache.hadoop.hbase.util.ClassSize.<clinit>(ClassSize.java:119)
+	... 25 more
+2025-03-04 21:49:17 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 创建 HBase 连接时出错
+java.io.IOException: java.lang.reflect.InvocationTargetException
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:240)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:218)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at cn.xpleaf.spider.utils.HBaseUtil.<clinit>(HBaseUtil.java:27)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.init(RandomHBaseRepositoryImpl.java:26)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.<init>(RandomHBaseRepositoryImpl.java:18)
+	at cn.xpleaf.spider.ISpider.getInstance(ISpider.java:109)
+	at cn.xpleaf.spider.FlinkSpider.main(FlinkSpider.java:17)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:238)
+	... 7 more
+Caused by: java.lang.UnsupportedOperationException: Constructor threw an exception for org.apache.hadoop.hbase.ipc.RpcClientImpl
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:54)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiateWithCustomCtor(ReflectionUtils.java:34)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:64)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:48)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.<init>(ConnectionManager.java:638)
+	... 12 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:46)
+	... 16 more
+Caused by: java.lang.ExceptionInInitializerError
+	at org.apache.hadoop.hbase.ipc.IPCUtil.<init>(IPCUtil.java:74)
+	at org.apache.hadoop.hbase.ipc.AbstractRpcClient.<init>(AbstractRpcClient.java:95)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1092)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1118)
+	... 21 more
+Caused by: java.lang.RuntimeException: Unexpected version format: 11.0.26
+	at org.apache.hadoop.hbase.util.ClassSize.<clinit>(ClassSize.java:119)
+	... 25 more
+2025-03-04 21:52:05 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 创建 HBase 连接时出错
+java.io.IOException: java.lang.reflect.InvocationTargetException
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:240)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:218)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at cn.xpleaf.spider.utils.HBaseUtil.<clinit>(HBaseUtil.java:27)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.init(RandomHBaseRepositoryImpl.java:26)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.<init>(RandomHBaseRepositoryImpl.java:18)
+	at cn.xpleaf.spider.ISpider.getInstance(ISpider.java:109)
+	at cn.xpleaf.spider.FlinkSpider.main(FlinkSpider.java:17)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:238)
+	... 7 more
+Caused by: java.lang.UnsupportedOperationException: Constructor threw an exception for org.apache.hadoop.hbase.ipc.RpcClientImpl
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:54)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiateWithCustomCtor(ReflectionUtils.java:34)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:64)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:48)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.<init>(ConnectionManager.java:638)
+	... 12 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:46)
+	... 16 more
+Caused by: java.lang.ExceptionInInitializerError
+	at org.apache.hadoop.hbase.ipc.IPCUtil.<init>(IPCUtil.java:74)
+	at org.apache.hadoop.hbase.ipc.AbstractRpcClient.<init>(AbstractRpcClient.java:95)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1092)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1118)
+	... 21 more
+Caused by: java.lang.RuntimeException: Unexpected version format: 11.0.26
+	at org.apache.hadoop.hbase.util.ClassSize.<clinit>(ClassSize.java:119)
+	... 25 more
+2025-03-04 21:55:07 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 创建 HBase 连接时出错
+java.io.IOException: java.lang.reflect.InvocationTargetException
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:240)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:218)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at cn.xpleaf.spider.utils.HBaseUtil.<clinit>(HBaseUtil.java:27)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.init(RandomHBaseRepositoryImpl.java:26)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.<init>(RandomHBaseRepositoryImpl.java:18)
+	at cn.xpleaf.spider.ISpider.getInstance(ISpider.java:109)
+	at cn.xpleaf.spider.FlinkSpider.main(FlinkSpider.java:17)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:238)
+	... 7 more
+Caused by: java.lang.UnsupportedOperationException: Constructor threw an exception for org.apache.hadoop.hbase.ipc.RpcClientImpl
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:54)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiateWithCustomCtor(ReflectionUtils.java:34)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:64)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:48)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.<init>(ConnectionManager.java:638)
+	... 12 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:46)
+	... 16 more
+Caused by: java.lang.ExceptionInInitializerError
+	at org.apache.hadoop.hbase.ipc.IPCUtil.<init>(IPCUtil.java:74)
+	at org.apache.hadoop.hbase.ipc.AbstractRpcClient.<init>(AbstractRpcClient.java:95)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1092)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1118)
+	... 21 more
+Caused by: java.lang.RuntimeException: Unexpected version format: 11.0.26
+	at org.apache.hadoop.hbase.util.ClassSize.<clinit>(ClassSize.java:119)
+	... 25 more
+2025-03-04 21:56:07 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 创建 HBase 连接时出错
+java.io.IOException: java.lang.reflect.InvocationTargetException
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:240)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:218)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at cn.xpleaf.spider.utils.HBaseUtil.<clinit>(HBaseUtil.java:27)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.init(RandomHBaseRepositoryImpl.java:26)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.<init>(RandomHBaseRepositoryImpl.java:18)
+	at cn.xpleaf.spider.ISpider.getInstance(ISpider.java:109)
+	at cn.xpleaf.spider.FlinkSpider.main(FlinkSpider.java:17)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:238)
+	... 7 more
+Caused by: java.lang.UnsupportedOperationException: Constructor threw an exception for org.apache.hadoop.hbase.ipc.RpcClientImpl
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:54)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiateWithCustomCtor(ReflectionUtils.java:34)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:64)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:48)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.<init>(ConnectionManager.java:638)
+	... 12 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:46)
+	... 16 more
+Caused by: java.lang.ExceptionInInitializerError
+	at org.apache.hadoop.hbase.ipc.IPCUtil.<init>(IPCUtil.java:74)
+	at org.apache.hadoop.hbase.ipc.AbstractRpcClient.<init>(AbstractRpcClient.java:95)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1092)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1118)
+	... 21 more
+Caused by: java.lang.RuntimeException: Unexpected version format: 11.0.26
+	at org.apache.hadoop.hbase.util.ClassSize.<clinit>(ClassSize.java:119)
+	... 25 more
+2025-03-04 21:58:32 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 创建 HBase 连接时出错
+java.io.IOException: java.lang.reflect.InvocationTargetException
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:240)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:218)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at cn.xpleaf.spider.utils.HBaseUtil.<clinit>(HBaseUtil.java:27)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.init(RandomHBaseRepositoryImpl.java:26)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.<init>(RandomHBaseRepositoryImpl.java:18)
+	at cn.xpleaf.spider.ISpider.getInstance(ISpider.java:109)
+	at cn.xpleaf.spider.FlinkSpider.main(FlinkSpider.java:17)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:238)
+	... 7 more
+Caused by: java.lang.UnsupportedOperationException: Constructor threw an exception for org.apache.hadoop.hbase.ipc.RpcClientImpl
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:54)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiateWithCustomCtor(ReflectionUtils.java:34)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:64)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:48)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.<init>(ConnectionManager.java:638)
+	... 12 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:46)
+	... 16 more
+Caused by: java.lang.ExceptionInInitializerError
+	at org.apache.hadoop.hbase.ipc.IPCUtil.<init>(IPCUtil.java:74)
+	at org.apache.hadoop.hbase.ipc.AbstractRpcClient.<init>(AbstractRpcClient.java:95)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1092)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1118)
+	... 21 more
+Caused by: java.lang.RuntimeException: Unexpected version format: 11.0.26
+	at org.apache.hadoop.hbase.util.ClassSize.<clinit>(ClassSize.java:119)
+	... 25 more
+2025-03-04 22:11:59 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 创建 HBase 连接时出错
+java.io.IOException: java.lang.reflect.InvocationTargetException
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:240)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:218)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at cn.xpleaf.spider.utils.HBaseUtil.<clinit>(HBaseUtil.java:27)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.init(RandomHBaseRepositoryImpl.java:26)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.<init>(RandomHBaseRepositoryImpl.java:18)
+	at cn.xpleaf.spider.ISpider.getInstance(ISpider.java:109)
+	at cn.xpleaf.spider.FlinkSpider.main(FlinkSpider.java:17)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:238)
+	... 7 more
+Caused by: java.lang.UnsupportedOperationException: Constructor threw an exception for org.apache.hadoop.hbase.ipc.RpcClientImpl
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:54)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiateWithCustomCtor(ReflectionUtils.java:34)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:64)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:48)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.<init>(ConnectionManager.java:638)
+	... 12 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:46)
+	... 16 more
+Caused by: java.lang.ExceptionInInitializerError
+	at org.apache.hadoop.hbase.ipc.IPCUtil.<init>(IPCUtil.java:74)
+	at org.apache.hadoop.hbase.ipc.AbstractRpcClient.<init>(AbstractRpcClient.java:95)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1092)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1118)
+	... 21 more
+Caused by: java.lang.RuntimeException: Unexpected version format: 11.0.26
+	at org.apache.hadoop.hbase.util.ClassSize.<clinit>(ClassSize.java:119)
+	... 25 more
+2025-03-04 22:12:40 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 创建 HBase 连接时出错
+java.io.IOException: java.lang.reflect.InvocationTargetException
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:240)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:218)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at cn.xpleaf.spider.utils.HBaseUtil.<clinit>(HBaseUtil.java:27)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.init(RandomHBaseRepositoryImpl.java:26)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.<init>(RandomHBaseRepositoryImpl.java:18)
+	at cn.xpleaf.spider.ISpider.getInstance(ISpider.java:109)
+	at cn.xpleaf.spider.FlinkSpider.main(FlinkSpider.java:17)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:238)
+	... 7 more
+Caused by: java.lang.UnsupportedOperationException: Constructor threw an exception for org.apache.hadoop.hbase.ipc.RpcClientImpl
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:54)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiateWithCustomCtor(ReflectionUtils.java:34)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:64)
+	at org.apache.hadoop.hbase.ipc.RpcClientFactory.createClient(RpcClientFactory.java:48)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.<init>(ConnectionManager.java:638)
+	... 12 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.hbase.util.ReflectionUtils.instantiate(ReflectionUtils.java:46)
+	... 16 more
+Caused by: java.lang.ExceptionInInitializerError
+	at org.apache.hadoop.hbase.ipc.IPCUtil.<init>(IPCUtil.java:74)
+	at org.apache.hadoop.hbase.ipc.AbstractRpcClient.<init>(AbstractRpcClient.java:95)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1092)
+	at org.apache.hadoop.hbase.ipc.RpcClientImpl.<init>(RpcClientImpl.java:1118)
+	... 21 more
+Caused by: java.lang.RuntimeException: Unexpected version format: 11.0.26
+	at org.apache.hadoop.hbase.util.ClassSize.<clinit>(ClassSize.java:119)
+	... 25 more
+2025-03-04 22:14:03 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 初始化表时出错
+org.apache.hadoop.hbase.DoNotRetryIOException: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.translateException(RpcRetryingCaller.java:239)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:212)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:360)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:334)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithRetries(RpcRetryingCaller.java:136)
+	at org.apache.hadoop.hbase.client.ResultBoundedCompletionService$QueueingFuture.run(ResultBoundedCompletionService.java:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at org.apache.hadoop.hbase.util.ByteStringer.<clinit>(ByteStringer.java:44)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildRegionSpecifier(RequestConverter.java:1031)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildScanRequest(RequestConverter.java:486)
+	at org.apache.hadoop.hbase.client.ScannerCallable.openScanner(ScannerCallable.java:368)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:200)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:62)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:210)
+	... 7 more
+Caused by: java.lang.ClassNotFoundException: com.google.protobuf.LiteralByteString
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 26 more
+2025-03-04 22:19:47 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 初始化表时出错
+org.apache.hadoop.hbase.DoNotRetryIOException: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.translateException(RpcRetryingCaller.java:239)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:212)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:360)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:334)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithRetries(RpcRetryingCaller.java:136)
+	at org.apache.hadoop.hbase.client.ResultBoundedCompletionService$QueueingFuture.run(ResultBoundedCompletionService.java:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at org.apache.hadoop.hbase.util.ByteStringer.<clinit>(ByteStringer.java:44)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildRegionSpecifier(RequestConverter.java:1031)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildScanRequest(RequestConverter.java:486)
+	at org.apache.hadoop.hbase.client.ScannerCallable.openScanner(ScannerCallable.java:368)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:200)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:62)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:210)
+	... 7 more
+Caused by: java.lang.ClassNotFoundException: com.google.protobuf.LiteralByteString
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 26 more
+2025-03-04 22:23:28 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 初始化表时出错
+org.apache.hadoop.hbase.DoNotRetryIOException: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.translateException(RpcRetryingCaller.java:239)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:212)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:360)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:334)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithRetries(RpcRetryingCaller.java:136)
+	at org.apache.hadoop.hbase.client.ResultBoundedCompletionService$QueueingFuture.run(ResultBoundedCompletionService.java:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at org.apache.hadoop.hbase.util.ByteStringer.<clinit>(ByteStringer.java:44)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildRegionSpecifier(RequestConverter.java:1031)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildScanRequest(RequestConverter.java:486)
+	at org.apache.hadoop.hbase.client.ScannerCallable.openScanner(ScannerCallable.java:368)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:200)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:62)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:210)
+	... 7 more
+Caused by: java.lang.ClassNotFoundException: com.google.protobuf.LiteralByteString
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 26 more
+2025-03-04 22:24:44 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 初始化表时出错
+org.apache.hadoop.hbase.DoNotRetryIOException: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.translateException(RpcRetryingCaller.java:239)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:212)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:360)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:334)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithRetries(RpcRetryingCaller.java:136)
+	at org.apache.hadoop.hbase.client.ResultBoundedCompletionService$QueueingFuture.run(ResultBoundedCompletionService.java:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at org.apache.hadoop.hbase.util.ByteStringer.<clinit>(ByteStringer.java:44)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildRegionSpecifier(RequestConverter.java:1031)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildScanRequest(RequestConverter.java:486)
+	at org.apache.hadoop.hbase.client.ScannerCallable.openScanner(ScannerCallable.java:368)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:200)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:62)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:210)
+	... 7 more
+Caused by: java.lang.ClassNotFoundException: com.google.protobuf.LiteralByteString
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 26 more
+2025-03-04 22:27:48 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 初始化表时出错
+org.apache.hadoop.hbase.DoNotRetryIOException: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.translateException(RpcRetryingCaller.java:239)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:212)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:360)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:334)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithRetries(RpcRetryingCaller.java:136)
+	at org.apache.hadoop.hbase.client.ResultBoundedCompletionService$QueueingFuture.run(ResultBoundedCompletionService.java:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at org.apache.hadoop.hbase.util.ByteStringer.<clinit>(ByteStringer.java:44)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildRegionSpecifier(RequestConverter.java:1031)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildScanRequest(RequestConverter.java:486)
+	at org.apache.hadoop.hbase.client.ScannerCallable.openScanner(ScannerCallable.java:368)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:200)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:62)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:210)
+	... 7 more
+Caused by: java.lang.ClassNotFoundException: com.google.protobuf.LiteralByteString
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 26 more
+2025-03-04 22:30:12 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 初始化表时出错
+org.apache.hadoop.hbase.DoNotRetryIOException: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.translateException(RpcRetryingCaller.java:239)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:212)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:360)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:334)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithRetries(RpcRetryingCaller.java:136)
+	at org.apache.hadoop.hbase.client.ResultBoundedCompletionService$QueueingFuture.run(ResultBoundedCompletionService.java:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at org.apache.hadoop.hbase.util.ByteStringer.<clinit>(ByteStringer.java:44)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildRegionSpecifier(RequestConverter.java:1031)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildScanRequest(RequestConverter.java:486)
+	at org.apache.hadoop.hbase.client.ScannerCallable.openScanner(ScannerCallable.java:368)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:200)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:62)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:210)
+	... 7 more
+Caused by: java.lang.ClassNotFoundException: com.google.protobuf.LiteralByteString
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 26 more
+2025-03-04 22:32:09 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 初始化表时出错
+org.apache.hadoop.hbase.DoNotRetryIOException: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.translateException(RpcRetryingCaller.java:239)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:212)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:360)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:334)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithRetries(RpcRetryingCaller.java:136)
+	at org.apache.hadoop.hbase.client.ResultBoundedCompletionService$QueueingFuture.run(ResultBoundedCompletionService.java:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at org.apache.hadoop.hbase.util.ByteStringer.<clinit>(ByteStringer.java:44)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildRegionSpecifier(RequestConverter.java:1031)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildScanRequest(RequestConverter.java:486)
+	at org.apache.hadoop.hbase.client.ScannerCallable.openScanner(ScannerCallable.java:368)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:200)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:62)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:210)
+	... 7 more
+Caused by: java.lang.ClassNotFoundException: com.google.protobuf.LiteralByteString
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 26 more
+2025-03-04 22:35:20 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 初始化表时出错
+org.apache.hadoop.hbase.DoNotRetryIOException: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.translateException(RpcRetryingCaller.java:239)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:212)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:360)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:334)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithRetries(RpcRetryingCaller.java:136)
+	at org.apache.hadoop.hbase.client.ResultBoundedCompletionService$QueueingFuture.run(ResultBoundedCompletionService.java:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at org.apache.hadoop.hbase.util.ByteStringer.<clinit>(ByteStringer.java:44)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildRegionSpecifier(RequestConverter.java:1031)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildScanRequest(RequestConverter.java:486)
+	at org.apache.hadoop.hbase.client.ScannerCallable.openScanner(ScannerCallable.java:368)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:200)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:62)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:210)
+	... 7 more
+Caused by: java.lang.ClassNotFoundException: com.google.protobuf.LiteralByteString
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 26 more
+2025-03-04 22:40:17 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 初始化表时出错
+org.apache.hadoop.hbase.DoNotRetryIOException: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.translateException(RpcRetryingCaller.java:239)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:212)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:360)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:334)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithRetries(RpcRetryingCaller.java:136)
+	at org.apache.hadoop.hbase.client.ResultBoundedCompletionService$QueueingFuture.run(ResultBoundedCompletionService.java:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at org.apache.hadoop.hbase.util.ByteStringer.<clinit>(ByteStringer.java:44)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildRegionSpecifier(RequestConverter.java:1031)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildScanRequest(RequestConverter.java:486)
+	at org.apache.hadoop.hbase.client.ScannerCallable.openScanner(ScannerCallable.java:368)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:200)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:62)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:210)
+	... 7 more
+Caused by: java.lang.ClassNotFoundException: com.google.protobuf.LiteralByteString
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 26 more
+2025-03-04 22:40:36 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 初始化表时出错
+org.apache.hadoop.hbase.DoNotRetryIOException: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.translateException(RpcRetryingCaller.java:239)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:212)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:360)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:334)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithRetries(RpcRetryingCaller.java:136)
+	at org.apache.hadoop.hbase.client.ResultBoundedCompletionService$QueueingFuture.run(ResultBoundedCompletionService.java:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at org.apache.hadoop.hbase.util.ByteStringer.<clinit>(ByteStringer.java:44)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildRegionSpecifier(RequestConverter.java:1031)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildScanRequest(RequestConverter.java:486)
+	at org.apache.hadoop.hbase.client.ScannerCallable.openScanner(ScannerCallable.java:368)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:200)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:62)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:210)
+	... 7 more
+Caused by: java.lang.ClassNotFoundException: com.google.protobuf.LiteralByteString
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 26 more
+2025-03-04 22:40:54 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 初始化表时出错
+org.apache.hadoop.hbase.DoNotRetryIOException: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.translateException(RpcRetryingCaller.java:239)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:212)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:360)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:334)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithRetries(RpcRetryingCaller.java:136)
+	at org.apache.hadoop.hbase.client.ResultBoundedCompletionService$QueueingFuture.run(ResultBoundedCompletionService.java:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at org.apache.hadoop.hbase.util.ByteStringer.<clinit>(ByteStringer.java:44)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildRegionSpecifier(RequestConverter.java:1031)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildScanRequest(RequestConverter.java:486)
+	at org.apache.hadoop.hbase.client.ScannerCallable.openScanner(ScannerCallable.java:368)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:200)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:62)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:210)
+	... 7 more
+Caused by: java.lang.ClassNotFoundException: com.google.protobuf.LiteralByteString
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 26 more
+2025-03-04 22:41:06 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 初始化表时出错
+org.apache.hadoop.hbase.DoNotRetryIOException: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.translateException(RpcRetryingCaller.java:239)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:212)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:360)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:334)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithRetries(RpcRetryingCaller.java:136)
+	at org.apache.hadoop.hbase.client.ResultBoundedCompletionService$QueueingFuture.run(ResultBoundedCompletionService.java:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at org.apache.hadoop.hbase.util.ByteStringer.<clinit>(ByteStringer.java:44)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildRegionSpecifier(RequestConverter.java:1031)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildScanRequest(RequestConverter.java:486)
+	at org.apache.hadoop.hbase.client.ScannerCallable.openScanner(ScannerCallable.java:368)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:200)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:62)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:210)
+	... 7 more
+Caused by: java.lang.ClassNotFoundException: com.google.protobuf.LiteralByteString
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 26 more
+2025-03-04 22:41:22 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 初始化表时出错
+org.apache.hadoop.hbase.DoNotRetryIOException: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.translateException(RpcRetryingCaller.java:239)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:212)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:360)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:334)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithRetries(RpcRetryingCaller.java:136)
+	at org.apache.hadoop.hbase.client.ResultBoundedCompletionService$QueueingFuture.run(ResultBoundedCompletionService.java:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at org.apache.hadoop.hbase.util.ByteStringer.<clinit>(ByteStringer.java:44)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildRegionSpecifier(RequestConverter.java:1031)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildScanRequest(RequestConverter.java:486)
+	at org.apache.hadoop.hbase.client.ScannerCallable.openScanner(ScannerCallable.java:368)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:200)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:62)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:210)
+	... 7 more
+Caused by: java.lang.ClassNotFoundException: com.google.protobuf.LiteralByteString
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 26 more
+2025-03-04 22:41:36 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 初始化表时出错
+org.apache.hadoop.hbase.DoNotRetryIOException: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.translateException(RpcRetryingCaller.java:239)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:212)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:360)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:334)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithRetries(RpcRetryingCaller.java:136)
+	at org.apache.hadoop.hbase.client.ResultBoundedCompletionService$QueueingFuture.run(ResultBoundedCompletionService.java:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at org.apache.hadoop.hbase.util.ByteStringer.<clinit>(ByteStringer.java:44)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildRegionSpecifier(RequestConverter.java:1031)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildScanRequest(RequestConverter.java:486)
+	at org.apache.hadoop.hbase.client.ScannerCallable.openScanner(ScannerCallable.java:368)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:200)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:62)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:210)
+	... 7 more
+Caused by: java.lang.ClassNotFoundException: com.google.protobuf.LiteralByteString
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 26 more
+2025-03-04 23:19:23 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 初始化表时出错
+org.apache.hadoop.hbase.DoNotRetryIOException: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.translateException(RpcRetryingCaller.java:239)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:212)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:360)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:334)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithRetries(RpcRetryingCaller.java:136)
+	at org.apache.hadoop.hbase.client.ResultBoundedCompletionService$QueueingFuture.run(ResultBoundedCompletionService.java:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at org.apache.hadoop.hbase.util.ByteStringer.<clinit>(ByteStringer.java:44)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildRegionSpecifier(RequestConverter.java:1031)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildScanRequest(RequestConverter.java:486)
+	at org.apache.hadoop.hbase.client.ScannerCallable.openScanner(ScannerCallable.java:368)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:200)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:62)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:210)
+	... 7 more
+Caused by: java.lang.ClassNotFoundException: com.google.protobuf.LiteralByteString
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 26 more
+2025-03-04 23:27:54 [main] [org.apache.hadoop.hbase.client.AsyncProcess] [ERROR] - Failed to get region location 
+org.apache.hadoop.hbase.DoNotRetryIOException: java.lang.NoClassDefFoundError: Could not initialize class org.apache.hadoop.hbase.util.ByteStringer
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.translateException(RpcRetryingCaller.java:239)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:212)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:360)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:334)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithRetries(RpcRetryingCaller.java:136)
+	at org.apache.hadoop.hbase.client.ResultBoundedCompletionService$QueueingFuture.run(ResultBoundedCompletionService.java:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.apache.hadoop.hbase.util.ByteStringer
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildRegionSpecifier(RequestConverter.java:1031)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildScanRequest(RequestConverter.java:486)
+	at org.apache.hadoop.hbase.client.ClientSmallScanner$SmallScannerCallable.call(ClientSmallScanner.java:194)
+	at org.apache.hadoop.hbase.client.ClientSmallScanner$SmallScannerCallable.call(ClientSmallScanner.java:180)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:210)
+	... 7 more
+2025-03-04 23:27:54 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 向 HBase 添加 URL 时出错
+org.apache.hadoop.hbase.client.RetriesExhaustedWithDetailsException: Failed 1 action: java.lang.NoClassDefFoundError: Could not initialize class org.apache.hadoop.hbase.util.ByteStringer: 1 time, 
+	at org.apache.hadoop.hbase.client.AsyncProcess$BatchErrors.makeException(AsyncProcess.java:228)
+	at org.apache.hadoop.hbase.client.AsyncProcess$BatchErrors.access$1700(AsyncProcess.java:208)
+	at org.apache.hadoop.hbase.client.AsyncProcess.waitForAllPreviousOpsAndReset(AsyncProcess.java:1694)
+	at org.apache.hadoop.hbase.client.BufferedMutatorImpl.backgroundFlushCommits(BufferedMutatorImpl.java:208)
+	at org.apache.hadoop.hbase.client.BufferedMutatorImpl.flush(BufferedMutatorImpl.java:183)
+	at org.apache.hadoop.hbase.client.HTable.flushCommits(HTable.java:1434)
+	at org.apache.hadoop.hbase.client.HTable.put(HTable.java:1018)
+	at cn.xpleaf.spider.utils.HBaseUtil.addUrl(HBaseUtil.java:96)
+	at cn.xpleaf.spider.core.repository.impl.RandomHBaseRepositoryImpl.offer(RandomHBaseRepositoryImpl.java:71)
+	at cn.xpleaf.spider.ISpider.setRepository(ISpider.java:260)
+	at cn.xpleaf.spider.ISpider.getInstance(ISpider.java:109)
+	at cn.xpleaf.spider.FlinkSpider.main(FlinkSpider.java:17)
+2025-03-04 23:57:32 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 初始化表时出错
+org.apache.hadoop.hbase.DoNotRetryIOException: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.translateException(RpcRetryingCaller.java:239)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:212)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:364)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:338)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithRetries(RpcRetryingCaller.java:136)
+	at org.apache.hadoop.hbase.client.ResultBoundedCompletionService$QueueingFuture.run(ResultBoundedCompletionService.java:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at org.apache.hadoop.hbase.util.ByteStringer.<clinit>(ByteStringer.java:44)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildRegionSpecifier(RequestConverter.java:1037)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildScanRequest(RequestConverter.java:488)
+	at org.apache.hadoop.hbase.client.ScannerCallable.openScanner(ScannerCallable.java:395)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:204)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:65)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:210)
+	... 7 more
+Caused by: java.lang.ClassNotFoundException: com.google.protobuf.LiteralByteString
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 26 more
+2025-03-04 23:57:40 [main] [cn.xpleaf.spider.utils.HBaseUtil] [ERROR] - 初始化表时出错
+org.apache.hadoop.hbase.DoNotRetryIOException: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.translateException(RpcRetryingCaller.java:239)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:212)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:364)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas$RetryingRPC.call(ScannerCallableWithReplicas.java:338)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithRetries(RpcRetryingCaller.java:136)
+	at org.apache.hadoop.hbase.client.ResultBoundedCompletionService$QueueingFuture.run(ResultBoundedCompletionService.java:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NoClassDefFoundError: com/google/protobuf/LiteralByteString
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at org.apache.hadoop.hbase.util.ByteStringer.<clinit>(ByteStringer.java:44)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildRegionSpecifier(RequestConverter.java:1037)
+	at org.apache.hadoop.hbase.protobuf.RequestConverter.buildScanRequest(RequestConverter.java:488)
+	at org.apache.hadoop.hbase.client.ScannerCallable.openScanner(ScannerCallable.java:395)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:204)
+	at org.apache.hadoop.hbase.client.ScannerCallable.call(ScannerCallable.java:65)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:210)
+	... 7 more
+Caused by: java.lang.ClassNotFoundException: com.google.protobuf.LiteralByteString
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 26 more
